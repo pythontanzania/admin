@@ -38,7 +38,7 @@ services:
       - LETSENCRYPT_HOST=admin.pycon.or.tz, www.admin.pycon.or.tz,
       - LETSENCRYPT_EMAIL=comms@pycon.or.tz
     ports:
-      - 1337:80
+      - 1338:80
     depends_on:
       - web
 
