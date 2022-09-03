@@ -69,7 +69,7 @@ The app consists of the following endpoints:
 
 - /api/speakers/create/ - To create a new speaker. Does not require authentication.
 
- - /api/docs - To access Swagger UI documentation of the app.
+ - /api/docs - To access Swagger UI documentation of the app. Does not require authentication.
  
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
