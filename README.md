@@ -1,6 +1,6 @@
 # Pycon Tanzania Website API
 
-This is the backend of the [Pycon Tanzania Website](pycon.or.tz). It is a collection of API endpoints created with the [Django Rest Framework](https://www.django-rest-framework.org).
+This is the backend of the [Pycon Tanzania Website](http://pycon.or.tz). It is a collection of API endpoints created with the [Django Rest Framework](https://www.django-rest-framework.org).
 
 It has three main apps:
 
