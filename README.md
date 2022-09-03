@@ -39,6 +39,8 @@ python manage.py makemigrations accounts
 python manage.py makemigrations eventTimeTable
 
 python manage.py makemigrations speakers
+
+python manage.py migrate
 ```
 Create a super user account with:
 ```bash
