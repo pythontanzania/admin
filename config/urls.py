@@ -22,6 +22,7 @@ urlpatterns = [
     path("api/speakers/", include("speakers.urls")),
     path("api/events/", include("eventTimeTable.urls")),
     path("api-auth/", include("rest_framework.urls")),
+    path("api/", include("dj_rest_auth.urls")),
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
     path("api/docs/", SpectacularSwaggerView.as_view(url_name="schema"), name="docs"),
 ]

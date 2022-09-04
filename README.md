@@ -26,19 +26,7 @@ pip install -r requirements.txt
 First migrate the database with:
 
 ```bash
-python manage.py makemigrations
-
-python manage.py migrate
-```
-
-Note that you might have to make migrations for each individual app as follows:
-
-```bash
-python manage.py makemigrations accounts
-
-python manage.py makemigrations eventTimeTable
-
-python manage.py makemigrations speakers
+python manage.py makemigrations accounts eventTimeTable speakers
 
 python manage.py migrate
 ```
@@ -52,6 +40,22 @@ Fill in the required details and run the app with:
 python manage.py runserver
 ```
 Access the site at: **127.0.0.1:8000**
+
+## API Token
+
+Log into the API through `127.0.0.1/api/login` with your username and password:
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d "{\"username\":\"your-username\", \"password\":\"your-password\"}" 127.0.0.1:8000/api/login/
+```
+The json response will have a `key` with the Token value:
+```bash
+{"key":"3be93be760436e39abefc9aa4b0c7492512e55fe"}
+```
+Use this token in the `Authorization Header` to access endpoints that require authorization:
+```bash
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Token your-token" 127.0.0.1:8000/api/events/create/
+```
 
 ## API Endpoints
 

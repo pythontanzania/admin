@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     # Third party
     "rest_framework",
     "corsheaders",
+    "rest_framework.authtoken",
+    "dj_rest_auth",
     "drf_spectacular",
     # Local
     "speakers.apps.SpeakersConfig",
@@ -141,6 +143,10 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
         "rest_framework.permissions.AllowAny",
+    ],
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.SessionAuthentication",
+        "rest_framework.authentication.TokenAuthentication",  # new
     ],
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
