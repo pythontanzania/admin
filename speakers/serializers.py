@@ -12,6 +12,7 @@ class SpeakerSerializer(serializers.ModelSerializer):
             "speaker_expertise",
             "speaker_topic",
             "speaker_email",
+            "speaker_image",
             "speaker_status",
         )
 
@@ -24,4 +25,5 @@ class SpeakerCreateSerializer(serializers.ModelSerializer):
             "speaker_expertise",
             "speaker_topic",
             "speaker_email",
+            "speaker_image",
         )

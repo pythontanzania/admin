@@ -9,9 +9,11 @@ __pycache__/
 # Django #
 *.log
 db.sqlite3
-media
+media/
+staticfiles
 migrations/
 post_pycon.py
+
 
 # Enviroment
 .env

@@ -8,7 +8,15 @@ class Speaker(models.Model):
     speaker_expertise = models.CharField(max_length=500)
     speaker_topic = models.CharField(max_length=500)
     speaker_email = models.EmailField()
-    speaker_status = models.CharField(max_length=100, default="Pending", blank=True)
+    speaker_image = models.ImageField("images", blank=True, null=True)
+    STATUS_CHOICES = [
+        ("PENDING", "PENDING"),
+        ("APPROVED", "APPROVED"),
+        ("REJECTED", "REJECTED"),
+    ]
+    speaker_status = models.CharField(
+        max_length=100, choices=STATUS_CHOICES, default="PENDING", blank=True
+    )
 
     def __str__(self):
         return self.speaker_name
