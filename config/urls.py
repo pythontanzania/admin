@@ -21,12 +21,12 @@ from django.conf import settings
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/speakers/", include("speakers.urls")),
-    path("api/events/", include("eventTimeTable.urls")),
+    path("speakers/", include("speakers.urls")),
+    path("events/", include("eventTimeTable.urls")),
     path("api-auth/", include("rest_framework.urls")),
-    path("api/", include("dj_rest_auth.urls")),
-    path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
-    path("api/docs/", SpectacularSwaggerView.as_view(url_name="schema"), name="docs"),
+    path("", include("dj_rest_auth.urls")),
+    path("schema/", SpectacularAPIView.as_view(), name="schema"),
+    path("", SpectacularSwaggerView.as_view(url_name="schema"), name="docs"),
     re_path(r"^media/(?P<path>.*)$", serve, {"document_root": settings.MEDIA_ROOT}),
     re_path(r"^static/(?P<path>.*)$", serve, {"document_root": settings.STATIC_ROOT}),
 ]

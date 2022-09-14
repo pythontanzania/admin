@@ -43,10 +43,10 @@ Access the site at: **127.0.0.1:8000**
 
 ## API Token
 
-Log into the API through `127.0.0.1/api/login` with your username and password:
+Log into the API through `127.0.0.1/login` with your username and password:
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -d "{\"username\":\"your-username\", \"password\":\"your-password\"}" 127.0.0.1:8000/api/login/
+curl -X POST -H "Content-Type: application/json" -d "{\"username\":\"your-username\", \"password\":\"your-password\"}" 127.0.0.1:8000/login/
 ```
 The json response will have a `key` with the Token value:
 ```bash
@@ -54,29 +54,29 @@ The json response will have a `key` with the Token value:
 ```
 Use this token in the `Authorization Header` to access endpoints that require authorization:
 ```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Token your-token" 127.0.0.1:8000/api/events/create/
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Token your-token" 127.0.0.1:8000/events/create/
 ```
 
 ## API Endpoints
 
 The app consists of the following endpoints:
+ - `/` - Root directory. Displays the documentation. Does not require authentication to access.
 
- - /admin - Django's default administrative portal. Requires authentication.
+ - `/admin` - Django's default administrative portal. Requires authentication.
 
- - /api/events/ - To get a json response of all available events. Does not require authentication.
+ - `/events/` - To get a json response of all available events. Does not require authentication.
 
- - /api/events/{id} - To retrieve, update or delete individual event. Requires authentication.
+ - `/events/{id}` - To retrieve, update or delete individual event. Requires authentication.
 
- - /api/events/create/ - To create a new event. Requires authentication.
+ - `/events/create/` - To create a new event. Requires authentication.
 
- - /api/speakers/ - To retrieve all speakers. Does not require authentication.
+ - `/speakers/` - To retrieve all speakers. Does not require authentication.
 
- - /api/speakers/{id} - To retrieve, edit or delete individual speaker. Requires authentication.
+ - `/speakers/{id}` - To retrieve, edit or delete individual speaker. Requires authentication.
 
-- /api/speakers/create/ - To create a new speaker. Does not require authentication.
+- `/speakers/create/` - To create a new speaker. Does not require authentication.
 
- - /api/docs - To access Swagger UI documentation of the app. Does not require authentication.
- 
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
