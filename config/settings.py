@@ -53,6 +53,8 @@ INSTALLED_APPS = [
     "speakers.apps.SpeakersConfig",
     "eventTimeTable.apps.EventtimetableConfig",
     "accounts.apps.AccountsConfig",
+    "cloudinary_storage",
+    "cloudinary",
 ]
 
 MIDDLEWARE = [
@@ -136,7 +138,8 @@ STATIC_URL = "/static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
 MEDIA_URL = "media/"
-MEDIA_ROOT = BASE_DIR / "media"
+DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
+# MEDIA_ROOT = BASE_DIR / "media"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -169,4 +172,10 @@ SPECTACULAR_SETTINGS = {
     "DESCRIPTION": "API Documentation for the Pycon Tanzania Website",
     "VERSION": "0.1.0",
     # OTHER SETTINGS
+}
+
+CLOUDINARY_STORAGE = {
+    "CLOUD_NAME": "****",
+    "API_KEY": "***",
+    "API_SECRET": "***",
 }
