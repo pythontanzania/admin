@@ -59,7 +59,7 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Token your-t
 
 ## FLOW CHART
 
-<img src="pycon-api-flowchart.png" style="border-radius:15px;display: block; margin: auto; align:center;" alt="photo" />
+<img src="pycon-api-flowchart.png" style="border-radius: 15px;display: block; margin: auto; align:center;" alt="photo" />
 
 
 ## API Endpoints
