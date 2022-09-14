@@ -57,7 +57,7 @@ Use this token in the `Authorization Header` to access endpoints that require au
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Token your-token" 127.0.0.1:8000/events/create/
 ```
 
-## FLOW CHART
+## Flow Chart
 
 <img src="pycon-api-flowchart.png" style="border-radius: 15px;display: block; margin: auto; align:center;" alt="photo" />
 
