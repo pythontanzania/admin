@@ -89,6 +89,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
  - [Mojo](https://github.com/AvicennaJr)
  - [Mtuchi](https://github.com/mtuchi)
+ - [Albert](https://github.com/AlbertSigsbert)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
