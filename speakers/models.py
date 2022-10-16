@@ -4,19 +4,14 @@ from django.db import models
 
 
 class Speaker(models.Model):
-    speaker_name = models.CharField(max_length=200)
-    speaker_expertise = models.CharField(max_length=500)
-    speaker_topic = models.CharField(max_length=500)
-    speaker_email = models.EmailField()
-    speaker_image = models.ImageField("images", blank=True, null=True)
-    STATUS_CHOICES = [
-        ("PENDING", "PENDING"),
-        ("APPROVED", "APPROVED"),
-        ("REJECTED", "REJECTED"),
-    ]
-    speaker_status = models.CharField(
-        max_length=100, choices=STATUS_CHOICES, default="PENDING", blank=True
-    )
+    name = models.CharField(max_length=200)
+    expertise = models.CharField(max_length=500)
+    topic = models.CharField(max_length=500)
+    email = models.EmailField()
+    image = models.ImageField('images', blank=True, null=True)
+    status = models.CharField(max_length=100, default="Pending", blank=True)
+    profile = models.CharField(max_length=100, blank=True, null=True)
+    website = models.CharField(max_length=100, blank=True, null=True)
 
     def __str__(self):
-        return self.speaker_name
+        return self.name

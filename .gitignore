@@ -8,15 +8,9 @@ __pycache__/
 
 # Django #
 *.log
-db.sqlite3
-media/
-staticfiles
-migrations/
 post_pycon.py
-pycon-tester.py
 
 # Enviroment
-.env
 .env.prod
 .env.prod.db
 

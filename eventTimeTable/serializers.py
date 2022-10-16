@@ -8,9 +8,9 @@ class EventSerializer(serializers.ModelSerializer):
         model = Event
         fields = (
             "id",
-            "event_title",
-            "event_time",
-            "event_duration",
-            "event_speaker",
-            "event_location",
+            "title",
+            "time",
+            "duration",
+            "speaker",
+            "location",
         )

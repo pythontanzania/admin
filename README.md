@@ -57,39 +57,34 @@ Use this token in the `Authorization Header` to access endpoints that require au
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Token your-token" 127.0.0.1:8000/events/create/
 ```
 
-## Flow Chart
-
-<img src="pycon-api-flowchart.png" style="border-radius: 15px;display: block; margin: auto; align:center;" alt="photo" />
-
-
 ## API Endpoints
 
 The app consists of the following endpoints:
- - `/` - Root directory. Displays the documentation. Does not require authentication to access.
 
- - `/admin` - Django's default administrative portal. Requires authentication.
+ - /admin - Django's default administrative portal. Requires authentication.
 
- - `/events/` - To get a json response of all available events. Does not require authentication.
+ - /events/ - To get a json response of all available events. Does not require authentication.
 
- - `/events/{id}` - To retrieve, update or delete individual event. Requires authentication.
+ - /events/{id} - To retrieve, update or delete individual event. Requires authentication.
 
- - `/events/create/` - To create a new event. Requires authentication.
+ - /events/create/ - To create a new event. Requires authentication.
 
- - `/speakers/` - To retrieve all speakers. Does not require authentication.
+ - /speakers/ - To retrieve all speakers. Does not require authentication.
 
- - `/speakers/{id}` - To retrieve, edit or delete individual speaker. Requires authentication.
+ - /speakers/{id} - To retrieve, edit or delete individual speaker. Requires authentication.
 
-- `/speakers/create/` - To create a new speaker. Does not require authentication.
+ - /speakers/create/ - To create a new speaker. Does not require authentication.
 
+ - /gallery/ - To get gallery images
 
+ - /gallery/create/ - To add gallery images
+
+ - /gallery/{id} - To retrieve, update or delete an individual gallery image
+
+ - /docs - To access Swagger UI documentation of the app. Does not require authentication.
+ 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-## Thanks
-
- - [Mojo](https://github.com/AvicennaJr)
- - [Mtuchi](https://github.com/mtuchi)
- - [Albert](https://github.com/AlbertSigsbert)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

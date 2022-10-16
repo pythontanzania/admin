@@ -8,12 +8,14 @@ class SpeakerSerializer(serializers.ModelSerializer):
         model = Speaker
         fields = (
             "id",
-            "speaker_name",
-            "speaker_expertise",
-            "speaker_topic",
-            "speaker_email",
-            "speaker_image",
-            "speaker_status",
+            "name",
+            "expertise",
+            "topic",
+            "email",
+            "image",
+            "status",
+            "profile",
+            "website",
         )
 
 
@@ -21,9 +23,11 @@ class SpeakerCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Speaker
         fields = (
-            "speaker_name",
-            "speaker_expertise",
-            "speaker_topic",
-            "speaker_email",
-            "speaker_image",
+            "name",
+            "expertise",
+            "topic",
+            "email",
+            "image",
+            "profile",
+            "website",
         )

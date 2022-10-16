@@ -2,11 +2,11 @@ from django.db import models
 
 
 class Event(models.Model):
-    event_title = models.CharField(max_length=200)
-    event_time = models.DateTimeField()
-    event_duration = models.DurationField()
-    event_speaker = models.CharField(max_length=200, null=True, blank=True)
-    event_location = models.CharField(max_length=200)
+    title = models.CharField(max_length=200)
+    time = models.DateTimeField()
+    duration = models.DurationField()
+    speaker = models.CharField(max_length=200)
+    location = models.CharField(max_length=200)
 
     def __str__(self):
-        return self.event_title
+        return self.title
